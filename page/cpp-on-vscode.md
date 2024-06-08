@@ -5,7 +5,6 @@
 1. 下载文件，单击下面的两项
    - [VS Code](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64 "System Installer, x64")
    - [w64devkit](https://github.com/skeeto/w64devkit/releases "GitHub")
-   - 对于 VS Code，如果下载速度慢，请转到下载，复制下载链接，粘贴到地址栏，将前面的 `az…….net` 替换为 `vscode.cdn.azure.cn`，其它内容不变。最终，链接形如 `https://vscode.cdn.azure.cn/stable/xxxxxx/VSCodeSetup-x64-x.xx.x.exe`。
 2. 安装 VS Code，其中，可以选择更改安装位置，记得将VS Code添加到桌面快捷方式。当然，这取决于阁下。
 
 3. 创建工作区路径。在非系统盘中，创建名为 `vscode` 的文件夹，再在其中创建 `code` 文件夹，存放代码文件。
