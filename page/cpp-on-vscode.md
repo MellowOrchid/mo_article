@@ -1,8 +1,8 @@
 2024年6月11日 12点30分
 
-这篇文章用来讲述如何下载安装 VS Code 并进行 C/C++ 编程。
+# 下载安装 VS Code 并进行 C/C++ 编程
 
-0. 系统要求：至少 Windows 10
+系统要求：至少 Windows 10
 
 1. 下载文件，单击下面的两项
    - [VS Code](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64 "System Installer, x64")
@@ -37,21 +37,21 @@
 
 8. 在 `文件(F)` 菜单中，点击 `将文件夹添加到工作区`，将之前创建的 `code` 文件夹添加进去，选择 `信任`。可右键关闭下面的 `大纲` 与 `时间线`。
 
-9. 点击上面的“新建文件”图标，起个名字，加上 `.cpp` 后缀，之后，可以在右下角找到叫 `Win32` 的 `C/C++配置`，点击后，选择 `编辑配置(UI)`，在 `编译器路径` 中，配置形如 `D:/vscode/w64devkit/bin/g++.exe`。
+9.  点击上面的“新建文件”图标，起个名字，加上 `.cpp` 后缀，之后，可以在右下角找到叫 `Win32` 的 `C/C++配置`，点击后，选择 `编辑配置(UI)`，在 `编译器路径` 中，配置形如 `D:/vscode/w64devkit/bin/g++.exe`。
 
 10. 写一段代码，或者复制以下代码：
 
-```cpp
-#include <iostream>
-using namespace std;
+      ```cpp
+      #include <iostream>
+      using namespace std;
 
-int main()
-{
-    cout << "Hello World.";
-    // system("pause");
-    return 0;
-}
-```
+      int main()
+      {
+          cout << "Hello World.";
+          // system("pause");
+          return 0;
+      }
+      ```
 
 11. 在右上角找到▷，即“运行C/C++”文件，选择g++，随后，在下面的“终端”窗格可以看到输出结果。
 
