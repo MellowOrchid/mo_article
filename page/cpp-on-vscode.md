@@ -1,4 +1,4 @@
-2024年6月11日 12点30分
+2024年6月11日 16点12分
 
 # 下载安装 VS Code 并进行 C/C++ 编程
 
@@ -41,17 +41,17 @@
 
 10. 写一段代码，或者复制以下代码：
 
-      ```cpp
-      #include <iostream>
-      using namespace std;
+    ```cpp
+    #include <iostream>
+    using namespace std;
 
-      int main()
-      {
-          cout << "Hello World.";
-          // system("pause");
-          return 0;
-      }
-      ```
+    int main()
+    {
+        cout << "Hello World.";
+        // system("pause");
+        return 0;
+    }
+    ```
 
 11. 在右上角找到▷，即“运行C/C++”文件，选择g++，随后，在下面的“终端”窗格可以看到输出结果。
 
