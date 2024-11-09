@@ -1,6 +1,6 @@
 本站地址：
 - [https://gp.morchid.top/](https://gp.morchid.top/ "个人域名")
-- [https://melloworchid.github.io/mo.github.io/](https://melloworchid.github.io/mo.github.io/ "Github Pages 地址")
+- [https://melloworchid.github.io/mo_article/](https://melloworchid.github.io/mo_article/ "Github Pages")
 
 这里存放 Mellow Orchid 所写的文章，使用 Markdown。
 
