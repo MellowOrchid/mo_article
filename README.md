@@ -8,6 +8,7 @@
 
 其他页面
 - [Github 主页](https://github.com/MellowOrchid)
+- [哔哩哔哩](https://space.bilibili.com/352453314)
 
 联系方式
 - QQ：212637329
