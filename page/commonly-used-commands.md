@@ -4,7 +4,7 @@
 ```bash
 bash <(curl -L -s check.unlock.media)
 ```
-> [GitHub](https://github.com/lmc999/RegionRestrictionCheck.git)
+> [GitHub | lmc999](https://github.com/lmc999/RegionRestrictionCheck.git)
 
 # Ubuntu Server 设置中文
 首先更新 apt 并安装中文语言包：
@@ -20,7 +20,28 @@ sudo dpkg-reconfigure locales
 sudo reboot
 ```
 
+# Trojan-GFW
+- 安装
+```bash
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
+```
+> [GitHub | trojan-gfw](https://github.com/trojan-gfw/trojan)
+- SQL配置
+```sql
+CREATE TABLE users (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    username VARCHAR(64) NOT NULL,
+    password CHAR(56) NOT NULL,
+    quota BIGINT NOT NULL DEFAULT 0,
+    download BIGINT UNSIGNED NOT NULL DEFAULT 0,
+    upload BIGINT UNSIGNED NOT NULL DEFAULT 0,
+    PRIMARY KEY (id),
+    INDEX (password)
+);
+```
+> [Authenticator | trojan](https://trojan-gfw.github.io/trojan/authenticator)
+
 # 各大镜像
 - [阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/)
-- [南京大学镜像站](https://mirror.nju.edu.cn/)
+- [南京大学 Mirror](https://mirror.nju.edu.cn/)
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
