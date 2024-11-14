@@ -2,7 +2,7 @@
 
 # 安装 Maven
 
-:information_source: 建议动手操作前通读一遍文章。
+ℹ️ 建议动手操作前通读一遍文章。
 
 ## Windows
 
@@ -31,25 +31,25 @@
 ### 配置 Maven
 
 配置其下 `conf\settings.xml`：
-   1. 找到 `<mirrors>` 标签
-       - 147 至 173 行
-       - 该标签周围有多行注释，如果使用记事本编辑，请注意识别
-    2. 选中其中的 `<mirror>` 标签
-        - **请勿多选 `</mirrors>`**
-    3. 删除或注释选中部分，替换为以下镜像源：
-        ```xml
-        <mirror>
-            <id>aliyunmaven</id>
-            <mirrorOf>*</mirrorOf>
-            <name>阿里云公共仓库</name>
-            <url>https://maven.aliyun.com/repository/public</url>
-        </mirror>
-        ```
-        - 这段配置文件可以在这里找到：
-        > [阿里巴巴 maven 镜像](https://developer.aliyun.com/mirror/maven)
 
-    4. 保存该文件
-        - 如果保存时提示权限不足，请重做第一步，注意将其解压至权限足够的文件夹里
+1. 找到 `<mirrors>` 标签
+   - 大致在 147 至 173 行
+   - 该标签周围有多行注释，如果使用记事本编辑，请注意识别
+2. 选中其中的 `<mirror>` 标签
+   - **请勿多选 `</mirrors>`**
+3. 删除或注释选中部分，替换为以下镜像源：
+    ```xml
+    <mirror>
+        <id>aliyunmaven</id>
+        <mirrorOf>*</mirrorOf>
+        <name>阿里云公共仓库</name>
+        <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+    ```
+   - 这段配置文件可以在这里找到：
+   > [阿里巴巴 maven 镜像](https://developer.aliyun.com/mirror/maven)
+4. 保存该文件
+   - 如果保存时提示权限不足，请重做第一步，注意将其解压至权限足够的文件夹里
 
 ### 配置 PATH
 
