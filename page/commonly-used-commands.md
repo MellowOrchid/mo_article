@@ -52,3 +52,18 @@ CREATE TABLE users (
 - [阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/)
 - [南京大学 Mirror](https://mirror.nju.edu.cn/)
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
+
+2025年2月20日 22点08分
+
+# Nginx 的 HTTPS 设置
+
+重定向至 https：
+```
+return 301 https://$host$request_uri;
+```
+
+设置证书：
+```
+ssl_certificate ;
+ssl_certificate_key ;
+```
