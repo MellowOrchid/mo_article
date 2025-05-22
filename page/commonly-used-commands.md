@@ -67,3 +67,36 @@ return 301 https://$host$request_uri;
 ssl_certificate ;
 ssl_certificate_key ;
 ```
+
+2025年5月22日 10点34分
+
+# Linux 时区设置
+
+其中，`Asia/Shanghai` 可以被替换为服务器实际位置：
+```bash
+sudo timedatectl set-timezone 'Asia/Shanghai'
+```
+
+# Nginx 阻止 IP 地址访问
+
+Nginx 配置：
+```
+server {
+           listen 80 default_server;
+           listen [::]:80 default_server;
+           listen 443 default_server;
+           listen [::]:443 default_server;
+           ssl_certificate ; # 补全假证书路径
+           ssl_certificate_key ; # 补全假私钥路径
+           server_name _;
+
+           return 444; # 阻断连接，客户端为 Empty Response
+}
+```
+
+生成自签假证书：
+```bash
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+-keyout dummy.key -out dummy.crt \
+-subj "/CN=localhost"
+```
