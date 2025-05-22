@@ -100,3 +100,33 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -keyout dummy.key -out dummy.crt \
 -subj "/CN=localhost"
 ```
+
+# Nginx 对 HTTP3 的实验性支持示例
+
+其中，端口为 8443，可按需更改为 443。
+```
+http {
+    log_format quic '$remote_addr - $remote_user [$time_local] '
+                    '"$request" $status $body_bytes_sent '
+                    '"$http_referer" "$http_user_agent" "$http3"';
+
+    access_log logs/access.log quic;
+
+    server {
+        # for better compatibility it's recommended
+        # to use the same port for http/3 and https
+        listen 8443 quic reuseport;
+        listen 8443 ssl;
+
+        ssl_certificate     certs/example.com.crt;
+        ssl_certificate_key certs/example.com.key;
+
+        location / {
+            # used to advertise the availability of HTTP/3
+            add_header Alt-Svc 'h3=":8443"; ma=86400';
+        }
+    }
+}
+```
+
+> [ngx_http_v3_module](https://nginx.org/en/docs/http/ngx_http_v3_module.html#example)
