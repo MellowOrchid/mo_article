@@ -5,3 +5,4 @@
 3. [一些常用的链接与命令](commonly-used-commands.md)
 4. [安装 Maven](install-maven.md)
 5. [获取并部署 TLS 证书](tls-cert.md)
+6. [安装 Typecho 后阅读文章或登录出现 404 的解决方案](how-to-resolve-404-in-Typecho.md)
